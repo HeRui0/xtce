@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="first">  
+  <xtce:CommandMetaData> 
+    <xtce:ArgumentTypeSet> 
+      <xtce:BinaryParameterType name="ThreeBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>3</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BinaryParameterType name="TwoBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>2</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BooleanParameterType name="Boolean"> 
+        <xtce:UnitSet/>  
+        <xtce:IntegerDataEncoding sizeInBits="1"/> 
+      </xtce:BooleanParameterType>  
+      <xtce:BinaryParameterType name="ElevenBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>11</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BinaryParameterType name="FourteenBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>14</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BinaryParameterType name="SixteenBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>16</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType> 
+    </xtce:ArgumentTypeSet>  
+    <xtce:MetaCommandSet> 
+      <xtce:MetaCommand name="First"> 
+        <xtce:ArgumentList> 
+          <xtce:Argument name="PVN" argumentTypeRef="ThreeBoolean"/>  
+          <xtce:Argument name="PT" argumentTypeRef="Boolean"/>  
+          <xtce:Argument name="SHF" argumentTypeRef="Boolean"/>  
+          <xtce:Argument name="APID" argumentTypeRef="ElevenBoolean"/>  
+          <xtce:Argument name="SF" argumentTypeRef="TwoBoolean"/>  
+          <xtce:Argument name="PSC" argumentTypeRef="FourteenBoolean"/>  
+          <xtce:Argument name="PDL" argumentTypeRef="SixteenBoolean"/> 
+        </xtce:ArgumentList>  
+        <xtce:CommandContainer name="FirstPacket"> 
+          <xtce:EntryList> 
+            <xtce:ArgumentRefEntry argumentRef="ThreeBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="ElevenBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="TwoBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="FourteenBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/> 
+          </xtce:EntryList> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand>  
+      <xtce:MetaCommand name="FirstA"> 
+        <xtce:BaseMetaCommand metaCommandRef="First"> 
+          <xtce:ArgumentAssignmentList> 
+            <xtce:ArgumentAssignment argumentName="PVN" argumentValue="8"/>  
+            <xtce:ArgumentAssignment argumentName="PT" argumentValue="5"/>  
+            <xtce:ArgumentAssignment argumentName="SHF" argumentValue="2"/>  
+            <xtce:ArgumentAssignment argumentName="APID" argumentValue="4"/>  
+            <xtce:ArgumentAssignment argumentName="SF" argumentValue="6"/>  
+            <xtce:ArgumentAssignment argumentName="PSC" argumentValue="7"/>  
+            <xtce:ArgumentAssignment argumentName="PDL" argumentValue="9"/> 
+          </xtce:ArgumentAssignmentList> 
+        </xtce:BaseMetaCommand>  
+        <xtce:CommandContainer name="FirstAPacket"> 
+          <xtce:BaseContainer containerRef="FirstPacket"/>  
+          <xtce:EntryList/> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand> 
+    </xtce:MetaCommandSet> 
+  </xtce:CommandMetaData> 
+</xtce:SpaceSystem>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="TC[30,5]">
+	<xtce:TelemetryMetaData>
+		<xtce:ParameterTypeSet/>
+		<xtce:Parameter/>
+		<xtce:ContainerSet/>
+	</xtce:TelemetryMetaData>
+	<xtce:CommandMetaData>
+		<xtce:ArgumentTypeSet>
+			<xtce:BinaryParameterType name="SixteenBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>16</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:BinaryParameterType name="FourBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>4</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:BinaryParameterType name="TwoBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>2</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:BooleanParameterType name="Boolean">
+				<xtce:UnitSet/>
+				<xtce:IntegerDataEncoding sizeInBits="1"/>
+			</xtce:BooleanParameterType>
+			<xtce:IntegerParameterType name="UnsignedType8" signed="false">
+				<xtce:UnitSet/>
+				<xtce:IntegerDataEncoding sizeInBits="8"/>
+			</xtce:IntegerParameterType>
+		</xtce:ArgumentTypeSet>
+		<xtce:MetaCommandSet>
+			<xtce:MetaCommand name="DeleteMacroX">
+				<xtce:ArgumentList>
+					<xtce:Argument name="Num" argumentTypeRef="SixteenBoolean"/>
+					<xtce:Argument name="ConditionOrNot" argumentTypeRef="FourBoolean"/>
+					<xtce:Argument name="StaticOrNot" argumentTypeRef="Boolean"/>
+					<xtce:Argument name="JudgeOrNot" argumentTypeRef="Boolean"/>
+					<xtce:Argument name="MacroWhat" argumentTypeRef="TwoBoolean"/>
+					<xtce:Argument name="N1" argumentTypeRef="UnsignedType8"/>
+				</xtce:ArgumentList>
+				<xtce:CommandContainer name="DeleteMacroXPacket">
+					<xtce:EntryList>
+						<xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="FourBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="Boolean"/>
+						<xtce:ArgumentRefEntry argumentRef="Boolean"/>
+						<xtce:ArgumentRefEntry argumentRef="TwoBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+					</xtce:EntryList>
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+			<xtce:MetaCommand name="DeleteMacro">
+				<xtce:BaseMetaCommand metaCommandRef="DeleteMacroX">
+					<xtce:ArgumentAssignmentList>
+						<xtce:ArgumentAssignment argumentName="Num" argumentValue="3005"/>
+						<xtce:ArgumentAssignment argumentName="ConditionOrNot" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="StaticOrNot" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="JudgeOrNot" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="MacroWhat" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="N1" argumentValue=" "/>
+					</xtce:ArgumentAssignmentList>
+				</xtce:BaseMetaCommand>
+				<xtce:CommandContainer name="DeleteMacroPacket"> 
+					<xtce:BaseContainer containerRef="DeleteMacroXPacket"/>
+					<xtce:EntryList/> 
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+		</xtce:MetaCommandSet>
+	</xtce:CommandMetaData>
+</xtce:SpaceSystem>

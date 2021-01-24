@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="TC[12,6]">  
+  <xtce:TelemetryMetaData> 
+    <xtce:ParameterTypeSet/>  
+    <xtce:Parameter/>  
+    <xtce:ContainerSet/> 
+  </xtce:TelemetryMetaData>  
+  <xtce:CommandMetaData> 
+    <xtce:ArgumentTypeSet> 
+      <xtce:BinaryParameterType name="SixteenBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>16</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:IntegerParameterType name="UnsignedType8" signed="false"> 
+        <xtce:UnitSet/>  
+        <xtce:IntegerDataEncoding sizeInBits="8"/> 
+      </xtce:IntegerParameterType> 
+    </xtce:ArgumentTypeSet>  
+    <xtce:MetaCommandSet> 
+      <xtce:MetaCommand name="DeleteMonitoringItemDefinitionX"> 
+        <xtce:ArgumentList> 
+          <xtce:Argument name="Num" argumentTypeRef="SixteenBoolean"/>  
+          <xtce:Argument name="N" argumentTypeRef="UnsignedType8"/>  
+          <xtce:Argument name="ID1" argumentTypeRef="UnsignedType8"/>
+          <xtce:Argument name="ID2" argumentTypeRef="UnsignedType8"/>
+          <xtce:Argument name="ID3" argumentTypeRef="UnsignedType8"/>
+          <xtce:Argument name="ID4" argumentTypeRef="UnsignedType8"/>
+          <xtce:Argument name="ID5" argumentTypeRef="UnsignedType8"/>
+          <xtce:Argument name="ID6" argumentTypeRef="UnsignedType8"/>
+        </xtce:ArgumentList>  
+        <xtce:CommandContainer name="DeleteMonitoringItemDefinitionXPacket"> 
+          <xtce:EntryList> 
+            <xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>  
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType8"/>
+          </xtce:EntryList> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand>  
+      <xtce:MetaCommand name="DeleteMonitoringItemDefinition"> 
+        <xtce:BaseMetaCommand metaCommandRef="DeleteMonitoringItemDefinitionX"> 
+          <xtce:ArgumentAssignmentList> 
+            <xtce:ArgumentAssignment argumentName="Num" argumentValue="1"/>  
+            <xtce:ArgumentAssignment argumentName="N" argumentValue="6"/>  
+            <xtce:ArgumentAssignment argumentName="ID1" argumentValue="99"/>
+            <xtce:ArgumentAssignment argumentName="ID2" argumentValue="88"/>
+            <xtce:ArgumentAssignment argumentName="ID3" argumentValue="77"/>
+            <xtce:ArgumentAssignment argumentName="ID4" argumentValue="66"/>
+            <xtce:ArgumentAssignment argumentName="ID5" argumentValue="55"/>
+            <xtce:ArgumentAssignment argumentName="ID6" argumentValue="44"/>
+          </xtce:ArgumentAssignmentList> 
+        </xtce:BaseMetaCommand>  
+        <xtce:CommandContainer name="DeleteMonitoringItemDefinitionPacket"> 
+          <xtce:BaseContainer containerRef="DeleteMonitoringItemDefinitionXPacket"/>  
+          <xtce:EntryList/> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand> 
+    </xtce:MetaCommandSet> 
+  </xtce:CommandMetaData> 
+</xtce:SpaceSystem>

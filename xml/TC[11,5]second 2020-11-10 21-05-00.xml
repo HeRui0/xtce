@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="second">  
+  <xtce:CommandMetaData> 
+    <xtce:ArgumentTypeSet> 
+      <xtce:BinaryParameterType name="SixteenBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>16</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BinaryParameterType name="EightBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>8</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType> 
+    </xtce:ArgumentTypeSet>  
+    <xtce:MetaCommandSet> 
+      <xtce:MetaCommand name="Second"> 
+        <xtce:ArgumentList> 
+          <xtce:Argument name="TC" argumentTypeRef="SixteenBoolean"/>  
+          <xtce:Argument name="IMT" argumentTypeRef="EightBoolean"/>  
+          <xtce:Argument name="ICN" argumentTypeRef="EightBoolean"/> 
+        </xtce:ArgumentList>  
+        <xtce:CommandContainer name="SecondPacket"> 
+          <xtce:EntryList> 
+            <xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="EightBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="EightBoolean"/> 
+          </xtce:EntryList> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand>  
+      <xtce:MetaCommand name="SecondA"> 
+        <xtce:BaseMetaCommand metaCommandRef="Second"> 
+          <xtce:ArgumentAssignmentList> 
+            <xtce:ArgumentAssignment argumentName="TC" argumentValue="3"/>  
+            <xtce:ArgumentAssignment argumentName="IMT" argumentValue="2"/>  
+            <xtce:ArgumentAssignment argumentName="ICN" argumentValue="1"/> 
+          </xtce:ArgumentAssignmentList> 
+        </xtce:BaseMetaCommand>  
+        <xtce:CommandContainer name="SecondAPacket"> 
+          <xtce:BaseContainer containerRef="SecondPacket"/>  
+          <xtce:EntryList/> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand> 
+    </xtce:MetaCommandSet> 
+  </xtce:CommandMetaData> 
+</xtce:SpaceSystem>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="F9">
+	<xtce:TelemetryMetaData>
+		<xtce:ParameterTypeSet/>
+		<xtce:Parameter/>
+		<xtce:ContainerSet/>
+	</xtce:TelemetryMetaData>
+	<xtce:CommandMetaData>
+		<xtce:ArgumentTypeSet>
+			<xtce:BinaryParameterType name="SixteenBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>16</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+		</xtce:ArgumentTypeSet>
+		<xtce:MetaCommandSet>
+			<xtce:MetaCommand name="AdditionalEventTableF9X">
+				<xtce:ArgumentList>
+					<xtce:Argument name="Num" argumentTypeRef="SixteenBoolean"/>
+				</xtce:ArgumentList>
+				<xtce:CommandContainer name="AdditionalEventTableF9XPacket">
+					<xtce:EntryList>
+						<xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>
+					</xtce:EntryList>
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+			<xtce:MetaCommand name="AdditionalEventTableF9">
+				<xtce:BaseMetaCommand metaCommandRef="AdditionalEventTableF9X">
+					<xtce:ArgumentAssignmentList>
+						<xtce:ArgumentAssignment argumentName="Num" argumentValue="F9"/>
+					</xtce:ArgumentAssignmentList>
+				</xtce:BaseMetaCommand>
+				<xtce:CommandContainer name="AdditionalEventTableF9Packet"> 
+					<xtce:BaseContainer containerRef="AdditionalEventTableF9XPacket"/>
+					<xtce:EntryList/> 
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+		</xtce:MetaCommandSet>
+	</xtce:CommandMetaData>
+</xtce:SpaceSystem>

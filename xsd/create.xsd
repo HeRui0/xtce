@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="">
+	<xtce:CommandMetaData>
+		<xtce:ArgumentTypeSet>
+		</xtce:ArgumentTypeSet>
+		<xtce:MetaCommandSet>
+			<xtce:MetaCommand name="">
+				<xtce:ArgumentList>
+				</xtce:ArgumentList>
+				<xtce:CommandContainer name="">
+					<xtce:EntryList>
+					</xtce:EntryList>
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+			<xtce:MetaCommand name="">
+				<xtce:BaseMetaCommand metaCommandRef="">
+					<xtce:ArgumentAssignmentList>
+					</xtce:ArgumentAssignmentList>
+				</xtce:BaseMetaCommand>
+				<xtce:CommandContainer name=""> 
+					<xtce:BaseContainer containerRef=""/>
+					<xtce:EntryList/> 
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+		</xtce:MetaCommandSet>
+	</xtce:CommandMetaData>
+</xtce:SpaceSystem>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="aaa">  
+  <xtce:CommandMetaData> 
+    <xtce:ArgumentTypeSet> 
+      <xtce:BinaryParameterType name="4Boolean">
+        <xtce:UnitSet/>
+        <BinaryDataEncoding sizeInBits="4"/>
+      </xtce:BinaryParameterType>
+      <xtce:BinaryParameterType name="8Boolean">
+        <xtce:UnitSet/>
+        <BinaryDataEncoding sizeInBits="8"/>
+      </xtce:BinaryParameterType>
+      <xtce:BinaryParameterType name="36Boolean">
+        <xtce:UnitSet/>
+        <BinaryDataEncoding sizeInBits="36"/>
+      </xtce:BinaryParameterType>
+      <xtce:BinaryParameterType name="14Boolean">
+        <xtce:UnitSet/>
+        <BinaryDataEncoding sizeInBits="14"/>
+      </xtce:BinaryParameterType>
+    </xtce:ArgumentTypeSet>  
+    <xtce:MetaCommandSet> 
+      <xtce:MetaCommand name="aaaX"> 
+        <xtce:ArgumentList> 
+          <xtce:Argument name="bbb" argumentTypeRef="4Boolean"/>
+          <xtce:Argument name="nnn" argumentTypeRef="8Boolean"/>
+          <xtce:Argument name="mmm" argumentTypeRef="36Boolean"/>
+          <xtce:Argument name="yyy" argumentTypeRef="14Boolean"/>
+        </xtce:ArgumentList>  
+        <xtce:CommandContainer name="aaaXPacket"> 
+          <xtce:EntryList> 
+            <xtce:ArgumentRefEntry argumentRef="4Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="8Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="36Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="14Boolean"/>
+          </xtce:EntryList> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand>  
+      <xtce:MetaCommand name="aaa"> 
+        <xtce:BaseMetaCommand metaCommandRef="aaaX"> 
+          <xtce:ArgumentAssignmentList> 
+            <xtce:ArgumentAssignment argumentName="bbb" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="nnn" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="mmm" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="yyy" argumentValue=" "/>
+          </xtce:ArgumentAssignmentList> 
+        </xtce:BaseMetaCommand>  
+        <xtce:CommandContainer name="aaaPacket"> 
+          <xtce:BaseContainer containerRef="aaaXPacket"/>  
+          <xtce:EntryList/> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand> 
+    </xtce:MetaCommandSet> 
+  </xtce:CommandMetaData> 
+</xtce:SpaceSystem>

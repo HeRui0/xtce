@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="bgg">  
+  <xtce:CommandMetaData> 
+    <xtce:ArgumentTypeSet> 
+      <xtce:BinaryParameterType name="Boolean">
+        <xtce:UnitSet/>
+        <BinaryDataEncoding sizeInBits=""/>
+      </xtce:BinaryParameterType>
+    </xtce:ArgumentTypeSet>  
+    <xtce:MetaCommandSet> 
+      <xtce:MetaCommand name="bggX"> 
+        <xtce:ArgumentList> 
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+          <xtce:Argument name="" argumentTypeRef="Boolean"/>
+        </xtce:ArgumentList>  
+        <xtce:CommandContainer name="bggXPacket"> 
+          <xtce:EntryList> 
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>
+          </xtce:EntryList> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand>  
+      <xtce:MetaCommand name="bgg"> 
+        <xtce:BaseMetaCommand metaCommandRef="bggX"> 
+          <xtce:ArgumentAssignmentList> 
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+            <xtce:ArgumentAssignment argumentName="" argumentValue=" "/>
+          </xtce:ArgumentAssignmentList> 
+        </xtce:BaseMetaCommand>  
+        <xtce:CommandContainer name="bggPacket"> 
+          <xtce:BaseContainer containerRef="bggXPacket"/>  
+          <xtce:EntryList/> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand> 
+    </xtce:MetaCommandSet> 
+  </xtce:CommandMetaData> 
+</xtce:SpaceSystem>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="TC[11,5]">  
+  <xtce:TelemetryMetaData> 
+    <xtce:ParameterTypeSet/>  
+    <xtce:Parameter/>  
+    <xtce:ContainerSet/> 
+  </xtce:TelemetryMetaData>  
+  <xtce:CommandMetaData> 
+    <xtce:ArgumentTypeSet> 
+      <xtce:BinaryParameterType name="FourBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>4</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BinaryParameterType name="TwoBoolean"> 
+        <xtce:UnitSet/>  
+        <xtce:BinaryDataEncoding> 
+          <xtce:SizeInBits> 
+            <xtce:FixedValue>2</xtce:FixedValue> 
+          </xtce:SizeInBits> 
+        </xtce:BinaryDataEncoding> 
+      </xtce:BinaryParameterType>  
+      <xtce:BooleanParameterType name="Boolean"> 
+        <xtce:UnitSet/>  
+        <xtce:IntegerDataEncoding sizeInBits="1"/> 
+      </xtce:BooleanParameterType>  
+      <xtce:AbsoluteTimeParameterType name="AbsoluteTime"> 
+        <xtce:Encoding units="seconds"> 
+          <xtce:IntegerDataEncoding sizeInBits="32"/> 
+        </xtce:Encoding>  
+        <xtce:ReferenceTime> 
+          <xtce:Epoch>TAI</xtce:Epoch> 
+        </xtce:ReferenceTime> 
+      </xtce:AbsoluteTimeParameterType>  
+      <xtce:IntegerParameterType name="UnsignedType" signed="false"> 
+        <xtce:UnitSet/>  
+        <xtce:IntegerDataEncoding sizeInBits="16"/> 
+      </xtce:IntegerParameterType> 
+    </xtce:ArgumentTypeSet>  
+    <xtce:MetaCommandSet> 
+      <xtce:MetaCommand name="DeleteEventItem"> 
+        <xtce:ArgumentList> 
+          <xtce:Argument name="allowOrNot" argumentTypeRef="FourBoolean"/>  
+          <xtce:Argument name="instructionEncodingOrNot" argumentTypeRef="Boolean"/>  
+          <xtce:Argument name="instructionIdentifierOrNot" argumentTypeRef="Boolean"/>  
+          <xtce:Argument name="timeAllow" argumentTypeRef="TwoBoolean"/>  
+          <xtce:Argument name="timeOne" argumentTypeRef="AbsoluteTime"/>  
+          <xtce:Argument name="timeTwo" argumentTypeRef="AbsoluteTime"/>  
+          <xtce:Argument name="instructionEncoding" argumentTypeRef="UnsignedType"/>  
+          <xtce:Argument name="instructionIdentifier" argumentTypeRef="UnsignedType"/> 
+        </xtce:ArgumentList>  
+        <xtce:CommandContainer name="DeleteEventItemPacket"> 
+          <xtce:EntryList> 
+            <xtce:ArgumentRefEntry argumentRef="FourBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="Boolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="TwoBoolean"/>  
+            <xtce:ArgumentRefEntry argumentRef="AbsoluteTime"/>  
+            <xtce:ArgumentRefEntry argumentRef="AbsoluteTime"/>  
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType"/>  
+            <xtce:ArgumentRefEntry argumentRef="UnsignedType"/> 
+          </xtce:EntryList> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand>  
+      <xtce:MetaCommand name="DeleteEventItemA"> 
+        <xtce:BaseMetaCommand metaCommandRef="DeleteEventItem"> 
+          <xtce:ArgumentAssignmentList> 
+            <xtce:ArgumentAssignment argumentName="allowOrNot" argumentValue="9"/>  
+            <xtce:ArgumentAssignment argumentName="instructionEncodingOrNot" argumentValue="8"/>  
+            <xtce:ArgumentAssignment argumentName="instructionIdentifierOrNot" argumentValue="7"/>  
+            <xtce:ArgumentAssignment argumentName="timeAllow" argumentValue="5"/>  
+            <xtce:ArgumentAssignment argumentName="timeOne" argumentValue="4"/>  
+            <xtce:ArgumentAssignment argumentName="timeTwo" argumentValue="3"/>  
+            <xtce:ArgumentAssignment argumentName="instructionEncoding" argumentValue="21"/>  
+            <xtce:ArgumentAssignment argumentName="instructionIdentifier" argumentValue="1"/> 
+          </xtce:ArgumentAssignmentList> 
+        </xtce:BaseMetaCommand>  
+        <xtce:CommandContainer name="DeleteEventItemAPacket"> 
+          <xtce:BaseContainer containerRef="DeleteEventItemPacket"/>  
+          <xtce:EntryList/> 
+        </xtce:CommandContainer> 
+      </xtce:MetaCommand> 
+    </xtce:MetaCommandSet> 
+  </xtce:CommandMetaData> 
+</xtce:SpaceSystem>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="F2">
+	<xtce:TelemetryMetaData>
+		<xtce:ParameterTypeSet/>
+		<xtce:Parameter/>
+		<xtce:ContainerSet/>
+	</xtce:TelemetryMetaData>
+	<xtce:CommandMetaData>
+		<xtce:ArgumentTypeSet>
+			<xtce:BinaryParameterType name="SixteenBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>16</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+		</xtce:ArgumentTypeSet>
+		<xtce:MetaCommandSet>
+			<xtce:MetaCommand name="BettingEventTableF2X">
+				<xtce:ArgumentList>
+					<xtce:Argument name="Num" argumentTypeRef="SixteenBoolean"/>
+				</xtce:ArgumentList>
+				<xtce:CommandContainer name="BettingEventTableF2XPacket">
+					<xtce:EntryList>
+						<xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>
+					</xtce:EntryList>
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+			<xtce:MetaCommand name="BettingEventTableF2">
+				<xtce:BaseMetaCommand metaCommandRef="BettingEventTableF2X">
+					<xtce:ArgumentAssignmentList>
+						<xtce:ArgumentAssignment argumentName="Num" argumentValue="F2"/>
+					</xtce:ArgumentAssignmentList>
+				</xtce:BaseMetaCommand>
+				<xtce:CommandContainer name="BettingEventTableF2Packet"> 
+					<xtce:BaseContainer containerRef="BettingEventTableF2XPacket"/>
+					<xtce:EntryList/> 
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+		</xtce:MetaCommandSet>
+	</xtce:CommandMetaData>
+</xtce:SpaceSystem>

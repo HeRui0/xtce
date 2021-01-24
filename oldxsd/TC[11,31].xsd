@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="TC[11,31]">
+	<xtce:TelemetryMetaData>
+		<xtce:ParameterTypeSet/>
+		<xtce:Parameter/>
+		<xtce:ContainerSet/>
+	</xtce:TelemetryMetaData>
+	<xtce:CommandMetaData>
+		<xtce:ArgumentTypeSet>
+			<xtce:BinaryParameterType name="SixteenBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>16</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:BinaryParameterType name="FourBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>4</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:BinaryParameterType name="TwoBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>2</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:BooleanParameterType name="Boolean">
+				<xtce:UnitSet/>
+				<xtce:IntegerDataEncoding sizeInBits="1"/>
+			</xtce:BooleanParameterType>
+			<xtce:AbsoluteTimeParameterType name="AbsoluteTime">
+				<xtce:Encoding units="seconds">
+					<xtce:IntegerDataEncoding sizeInBits="32"/>
+				</xtce:Encoding>
+				<xtce:ReferenceTime>
+					<xtce:Epoch>TAI</xtce:Epoch>
+				</xtce:ReferenceTime>
+			</xtce:AbsoluteTimeParameterType>
+			<xtce:IntegerParameterType name="UnsignedType" signed="false">
+				<xtce:UnitSet/>
+				<xtce:IntegerDataEncoding sizeInBits="16"/>
+			</xtce:IntegerParameterType>
+		</xtce:ArgumentTypeSet>
+		<xtce:MetaCommandSet>
+			<xtce:MetaCommand name="ProhibitEventItemDeletionX">
+				<xtce:ArgumentList>
+					<xtce:Argument name="Num" argumentTypeRef="SixteenBoolean"/>
+					<xtce:Argument name="AllowOrNot" argumentTypeRef="FourBoolean"/>
+					<xtce:Argument name="InstructionEncodingOrNot" argumentTypeRef="Boolean"/>
+					<xtce:Argument name="InstructionIdentifierOrNot" argumentTypeRef="Boolean"/>
+					<xtce:Argument name="TimeAllow" argumentTypeRef="TwoBoolean"/>
+					<xtce:Argument name="TimeOne" argumentTypeRef="AbsoluteTime"/>
+					<xtce:Argument name="TimeTwo" argumentTypeRef="AbsoluteTime"/>
+					<xtce:Argument name="InstructionEncoding" argumentTypeRef="UnsignedType"/>
+					<xtce:Argument name="InstructionIdentifier" argumentTypeRef="UnsignedType"/>
+				</xtce:ArgumentList>
+				<xtce:CommandContainer name="ProhibitEventItemDeletionXPacket">
+					<xtce:EntryList>
+						<xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="FourBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="Boolean"/>
+						<xtce:ArgumentRefEntry argumentRef="Boolean"/>
+						<xtce:ArgumentRefEntry argumentRef="TwoBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="AbsoluteTime"/>
+						<xtce:ArgumentRefEntry argumentRef="AbsoluteTime"/>
+						<xtce:ArgumentRefEntry argumentRef="UnsignedType"/>
+						<xtce:ArgumentRefEntry argumentRef="UnsignedType"/>
+					</xtce:EntryList>
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+			<xtce:MetaCommand name="ProhibitEventItemDeletion">
+				<xtce:BaseMetaCommand metaCommandRef="ProhibitEventItemDeletionX">
+					<xtce:ArgumentAssignmentList>
+						<xtce:ArgumentAssignment argumentName="Num" argumentValue="1131"/>
+						<xtce:ArgumentAssignment argumentName="AllowOrNot" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="InstructionEncodingOrNot" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="InstructionIdentifierOrNot" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="TimeAllow" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="TimeOne" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="TimeTwo" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="InstructionEncoding" argumentValue=" "/>
+						<xtce:ArgumentAssignment argumentName="InstructionIdentifier" argumentValue=" "/>
+					</xtce:ArgumentAssignmentList>
+				</xtce:BaseMetaCommand>
+				<xtce:CommandContainer name="ProhibitEventItemDeletionPacket"> 
+					<xtce:BaseContainer containerRef="ProhibitEventItemDeletionXPacket"/>
+					<xtce:EntryList/> 
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+		</xtce:MetaCommandSet>
+	</xtce:CommandMetaData>
+</xtce:SpaceSystem>

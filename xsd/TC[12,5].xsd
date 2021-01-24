@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtce:SpaceSystem xmlns:xtce="https://www.omg.org/spec/XTCE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="https://www.omg.org/spec/XTCE/20180204/SpaceSystem.xsd" name="TC[12,5]">
+	<xtce:TelemetryMetaData>
+		<xtce:ParameterTypeSet/>
+		<xtce:Parameter/>
+		<xtce:ContainerSet/>
+	</xtce:TelemetryMetaData>
+	<xtce:CommandMetaData>
+		<xtce:ArgumentTypeSet>
+			<xtce:BinaryParameterType name="SixteenBoolean"> 
+				<xtce:UnitSet/> 
+					<xtce:BinaryDataEncoding> 
+						<xtce:SizeInBits> 
+							<xtce:FixedValue>16</xtce:FixedValue> 
+						</xtce:SizeInBits> 
+					</xtce:BinaryDataEncoding> 
+			</xtce:BinaryParameterType>
+			<xtce:IntegerParameterType name="UnsignedType29" signed="false">
+				<xtce:UnitSet/>
+				<xtce:IntegerDataEncoding sizeInBits="232"/>
+			</xtce:IntegerParameterType>
+		</xtce:ArgumentTypeSet>
+		<xtce:MetaCommandSet>
+			<xtce:MetaCommand name="AddMonitoringItemDefinitionX">
+				<xtce:ArgumentList>
+					<xtce:Argument name="Num" argumentTypeRef="SixteenBoolean"/>
+					<xtce:Argument name="ParameterMonitoringItems" argumentTypeRef="UnsignedType29"/>
+				</xtce:ArgumentList>
+				<xtce:CommandContainer name="AddMonitoringItemDefinitionXPacket">
+					<xtce:EntryList>
+						<xtce:ArgumentRefEntry argumentRef="SixteenBoolean"/>
+						<xtce:ArgumentRefEntry argumentRef="UnsignedType29"/>
+					</xtce:EntryList>
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+			<xtce:MetaCommand name="AddMonitoringItemDefinition">
+				<xtce:BaseMetaCommand metaCommandRef="AddMonitoringItemDefinitionX">
+					<xtce:ArgumentAssignmentList>
+						<xtce:ArgumentAssignment argumentName="Num" argumentValue="1205"/>
+						<xtce:ArgumentAssignment argumentName="ParameterMonitoringItems" argumentValue=" "/>
+					</xtce:ArgumentAssignmentList>
+				</xtce:BaseMetaCommand>
+				<xtce:CommandContainer name="AddMonitoringItemDefinitionPacket"> 
+					<xtce:BaseContainer containerRef="AddMonitoringItemDefinitionXPacket"/>
+					<xtce:EntryList/> 
+				</xtce:CommandContainer>
+			</xtce:MetaCommand>
+		</xtce:MetaCommandSet>
+	</xtce:CommandMetaData>
+</xtce:SpaceSystem>
