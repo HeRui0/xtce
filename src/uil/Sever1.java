@@ -26,26 +26,6 @@ public class Sever1 extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Sever1 frame = new Sever1();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Sever1() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//窗口大小

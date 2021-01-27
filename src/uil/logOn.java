@@ -22,7 +22,7 @@ import java.awt.Point;
 import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
-
+/**
 class ImageScale {
     public static ImageIcon getImage(ImageIcon icon,int width,int height){
         Image image=icon.getImage().getScaledInstance(width, height,Image.SCALE_REPLICATE);
@@ -41,7 +41,7 @@ class WindowXY {
         return getXY(dimension.width, dimension.height);
     }
 }
-
+*/
 @SuppressWarnings("serial")
 public class logOn extends JDialog {
 
@@ -81,8 +81,6 @@ public class logOn extends JDialog {
             logOn dialog = new logOn();
             dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
             dialog.setVisible(true);
-
-            //dialog.dispose();//销毁当前界面
         } catch (Exception e) {
             e.printStackTrace();
         }
